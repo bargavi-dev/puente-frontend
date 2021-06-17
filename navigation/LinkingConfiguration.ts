@@ -12,19 +12,23 @@ export default {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Profile: {
             screens: {
-              TabOneScreen: 'one',
+              ProfileTabNavigator: 'one',
             },
           },
-          TabTwo: {
+          Connections: {
             screens: {
-              TabTwoScreen: 'two',
+              ConnectionsTabNavigator: 'two',
             },
           },
-        },
+          Exchanges: {
+            screens: {
+              ExchangesTabNavigator: 'three',
+            },
+          }
       },
       NotFound: '*',
     },
   },
-};
+}}
