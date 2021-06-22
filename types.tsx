@@ -3,6 +3,10 @@
  * https://reactnavigation.org/docs/typescript/
  */
 
+export type Root = {
+  HomeNavigator: undefined;
+}
+
 export type RootStackParamList = {
   Root: undefined;
   NotFound: undefined;

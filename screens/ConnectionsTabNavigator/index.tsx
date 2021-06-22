@@ -1,1 +1,1 @@
-export { default } from './ConnectiosTabNavigator'
+export { default } from './ConnectionsTabNavigator';

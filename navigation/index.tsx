@@ -8,19 +8,28 @@ import { createStackNavigator } from '@react-navigation/stack';
 import * as React from 'react';
 import { ColorSchemeName } from 'react-native';
 import HomeScreen from '../screens/HomeNavigator';
+import SignUpScreen from '../screens/HomeNavigator/SignUpScreen';
 
 import NotFoundScreen from '../screens/NotFoundScreen';
 import { RootStackParamList } from '../types';
 import BottomTabNavigator from './BottomTabNavigator';
 import LinkingConfiguration from './LinkingConfiguration';
 
+
+// import * as eva from '@eva-design/eva';
+// import { ApplicationProvider } from '@ui-kitten/components';
+
+
 export default function Navigation({ colorScheme }: { colorScheme: ColorSchemeName }) {
   return (
+
+
     <NavigationContainer
       linking={LinkingConfiguration}
       theme={colorScheme === 'dark' ? DarkTheme : DefaultTheme}>
-      <RootNavigator />
+        <RootNavigator />
     </NavigationContainer>
+
   );
 }
 
@@ -30,11 +39,14 @@ const Stack = createStackNavigator<RootStackParamList>();
 
 function RootNavigator() {
   return (
+    
     <Stack.Navigator screenOptions={{ headerShown: false }}>
-      {/* need to create homenavigator and replace the homescreen
-      component on next line with home navigator component
-      that also contains the sign in and sign up  */}
-      <Stack.Screen name="HomeNavigator" component={HomeScreen}/>
+     
+      
+
+      <Stack.Screen name="Home" component={HomeScreen}/>
+     
+      {/* <Stack.Screen name="SignUp" component={SignUpScreen}/> */}
       <Stack.Screen name="Root" component={BottomTabNavigator} />
       <Stack.Screen name="NotFound" component={NotFoundScreen} options={{ title: 'Oops!' }} />
     </Stack.Navigator>
